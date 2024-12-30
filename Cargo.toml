@@ -1,6 +1,6 @@
 [package]
 name = "easyz3"
-version = "0.0.0"
+version = "0.0.1"
 authors = ["Patrick <send@spam.here>"]
 description = "A simplified API for the wonderful Z3 SAT solver"
 keywords = ["z3","SATsolver","constraint_solver","theorem_prover"]
