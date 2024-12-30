@@ -1,0 +1,18 @@
+[package]
+name = "easyz3"
+version = "0.0.0"
+authors = ["Patrick <send@spam.here>"]
+description = "A simplified API for the wonderful Z3 SAT solver"
+keywords = ["z3","SATsolver","constraint_solver","theorem_prover"]
+edition = "2018"
+license = "GNU AFFERO"
+repository = "https://github.com/PatrickTheElder/easyz3"
+
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1"
+syn = { version = "1.0", features = ["full"]}
+
