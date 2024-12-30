@@ -1,15 +1,15 @@
 # EasyZ3:
 
-This is a simplified API to get started with the z3 SAT solver and solve easy problems. It is not intended to fully replace the z3 and z3-sys API. They are complicated for a reason.
-
-
+This is a simplified API to get started with the z3 SAT solver and solve easy problems. It does not fully replace the z3 and z3-sys API.
 
 ## Motivation: 
 
 Using the official z3 bindings, this line adds a simple constraint to the z3 solver:
 
 ```rust
-solver.assert(&Int::_eq(&Int::add(&ctx,&[&Int::add(&ctx,&[&Int::mul(&ctx, &[&a, &a]),&Int::mul(&ctx,&[&Int::from_i64(&ctx, 7), &a],),],),&Int::from_i64(&ctx, 8),],),&Int::from_i64(&ctx, 268),),);
+solver.assert(&Int::_eq(&Int::add(&ctx,&[&Int::add(&ctx,&[&Int::mul(&ctx, &[&a, &a]),
+&Int::mul(&ctx,&[&Int::from_i64(&ctx, 7), &a],),],),&Int::from_i64(&ctx, 8),],),
+&Int::from_i64(&ctx, 268),),);
 ```
 
 Here is the same constraint in easyz3:
@@ -23,8 +23,10 @@ If you prefer the second syntax, this crate is for you.
 ## Examples:
 
 Here is a simple example with easyz3:
+(do ```cargo add easyz3``` and ```cargo add z3``` first)
 
 ```rust
+use easyz3::*;
 // initialize z3 and declare symbolic variable "a"
 z3_init!(a);
 
