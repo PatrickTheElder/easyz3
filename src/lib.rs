@@ -3,13 +3,13 @@ mod formula_source_gen;
 mod utils;
 
 extern crate proc_macro;
-use proc_macro::{TokenStream};
+use proc_macro::TokenStream;
 use std::str::FromStr;
 
 use crate::disallow_solution::disallow;
 use crate::formula_source_gen::*;
 use crate::utils::{extract_variables, hard_assert, Z3Type};
-use syn::{ parse_str, Expr};
+use syn::{parse_str, Expr};
 
 /// declare symbolic int variables
 fn declare_variables_int(input: TokenStream) -> String {
